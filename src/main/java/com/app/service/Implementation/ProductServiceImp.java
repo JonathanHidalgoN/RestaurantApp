@@ -3,10 +3,13 @@ package com.app.service.Implementation;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.app.model.RestaurantProduct;
 import com.app.repository.ProductRepository;
 import com.app.service.ProductService;
 
+@Service
 public class ProductServiceImp implements ProductService {
     
     private final ProductRepository productRepository;
