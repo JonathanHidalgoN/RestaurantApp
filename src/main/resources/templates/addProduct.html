@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Agrega un productos</title>
+</head>
+
+<body>
+    <h1>Agrega un producto</h1>
+    <form action="#" th:action="@{/api/addproduct}" th:object="${product}" method="post">
+        <label for="productName" class="col-form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Product name" th:filed="*{productname}">
+        <label for="productPrice" class="col-form-label">Price</label>
+        <input type="number" class="form-control" id="price" placeholder="Product price">
+        <input type="submit" value="Add product" class="btn btn-primary">
+    </form>
+</body>
+</html>
